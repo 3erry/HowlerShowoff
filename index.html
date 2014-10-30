@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset-UTF-8"/>
+	<title>Howler Test</title>
+
+	<script type="text/javascript" src="/MAMP/htdocs/js/howler.min.js"></script>
+
+	<script type="text/javascript">
+	var sound = new Howl({
+		urls: ['test.mp3', 'test.ogg'],
+		sprite: {
+    		blast: [9000, 22000],
+   			laser: [40000, 50000],
+    		weiner: [300000, 303000]
+  		}
+
+		});
+	</script>
+
+	<style>
+	body 		{margin:0px; padding:0px; background-color: #000000;}
+	.wrapper	{width:100px; height:500px; margin:0px auto; position: relective;}
+	p 			{color: white;}
+	</style>
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<p>Prototype</p>
+		<button onclick="sound.play('blast')">Play Sprite 1</button>
+		<button onclick="sound.play('laser')">Play Sprite 2</button>
+		<button onclick="sound.play('weiner')">Play Sprite 3</button>
+		<br>
+		<br>
+		<button onclick="sound.pause()">Pause</button>
+		<br>
+		<br>
+		<button onclick="sound.stop()">Stop</button>
+		<br>
+		<br>
+		<button onclick="sound.mute()">Mute</button>
+	</div>
+</body>
+</html>
